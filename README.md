@@ -1,59 +1,73 @@
-# Dolce Hotels and Resorts — Landing Page
+# React + TypeScript + Vite
 
-Corporate travel landing page for Dolce Hotels and Resorts, Parsippany NJ.  
-Built with React 19, TypeScript, Vite, Tailwind CSS, and Framer Motion.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Project Structure
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-dolcemain/
-├── app/                    # React application
-│   ├── public/
-│   │   └── images/         # All hotel images and assets
-│   ├── src/
-│   │   ├── components/     # Navigation, BookingBar, SectionReveal, UI components
-│   │   ├── sections/       # Page sections (Hero, Rooms, Dining, etc.)
-│   │   ├── App.tsx         # Root component
-│   │   └── index.css       # Global styles & Dolce brand tokens
-│   ├── package.json
-│   └── vite.config.ts
-└── README.md
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-## Local Development
-
-```bash
-cd app
-npm install
-npm run dev
-```
-
-App runs at `http://localhost:5173`
-
-## Build for Production
-
-```bash
-cd app
-npm run build
-```
-
-Output goes to `app/dist/`.
-
-## Deployment
-
-| Platform | Build Command | Publish Directory |
-|----------|--------------|-------------------|
-| Netlify  | `cd app && npm install && npm run build` | `app/dist` |
-| Vercel   | `cd app && npm run build` | `app/dist` |
-| Hostinger / Static Host | `cd app && npm install && npm run build` | `app/dist` |
-
-> **Node version:** 18+ recommended
-
-## Tech Stack
-
-- React 19 + TypeScript
-- Vite 7
-- Tailwind CSS 3
-- Framer Motion 12
-- Radix UI (shadcn/ui components)
-- Lucide React icons
