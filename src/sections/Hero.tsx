@@ -55,7 +55,9 @@ export default function Hero() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          preload="auto"
+          className="w-full h-full object-cover [image-rendering:high-quality]"
+          style={{ willChange: 'transform' }}
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -84,9 +86,9 @@ export default function Hero() {
 
             <motion.h1
               variants={itemVariants}
-              className="font-lampoon text-5xl md:text-6xl lg:text-7xl text-white leading-[0.9] mb-6 lowercase"
+              className="font-lampoon text-5xl md:text-6xl lg:text-7xl text-white leading-[0.9] mb-6"
             >
-              Stay Beyond Ordinary
+              Stay beyond ordinary
             </motion.h1>
 
             <motion.p

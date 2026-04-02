@@ -72,9 +72,9 @@ export default function Dining() {
 
           <motion.h2
             variants={itemVariants}
-            className="font-lampoon text-5xl md:text-6xl lg:text-7xl text-white leading-[0.9] mb-6 lowercase"
+            className="font-lampoon text-5xl md:text-6xl lg:text-7xl text-white leading-[0.9] mb-6"
           >
-            savor the moment
+            Savor the moment
           </motion.h2>
 
           <motion.p
