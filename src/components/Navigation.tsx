@@ -51,7 +51,7 @@ export default function Navigation() {
               <img
                 src="/images/dolcelogo.png"
                 alt="Dolce Hotels and Resorts"
-                className="h-10 w-auto transition-all duration-300"
+                className="h-[60px] w-auto transition-all duration-300"
               />
             </a>
 

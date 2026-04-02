@@ -44,14 +44,17 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative h-screen w-full overflow-hidden pt-20">
-      {/* Background Image with Parallax - Dolce branded hero */}
+      {/* Background Video with Parallax - Dolce branded hero */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 w-full h-[130%] -top-[15%]"
       >
-        <img
-          src="/images/hero-dolce.png"
-          alt="Dolce Hotels and Resorts"
+        <video
+          src="/images/Hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
         />
         {/* Gradient Overlay */}
