@@ -1,11 +1,11 @@
-{
-  "rootDirectory": "./app"
-}
 // {
-//   "builds": [
-//     {
-//       "src": "package.json",
-//       "use": "@vercel/node"
-//     }
-//   ]
+//   "rootDirectory": "app"
 // }
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ]
+}
