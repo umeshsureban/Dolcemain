@@ -79,23 +79,23 @@ export default function Hero() {
               variants={itemVariants}
               className="text-white/70 text-sm tracking-[0.2em] uppercase mb-4 font-avenir-heavy"
             >
-              The Art of Inspiration
+              Where Business Meets Distinction
             </motion.p>
 
             <motion.h1
               variants={itemVariants}
               className="font-lampoon text-5xl md:text-6xl lg:text-7xl text-white leading-[0.9] mb-6 lowercase"
             >
-              inspire discovery
+              Stay Beyond Ordinary
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-white/80 text-lg md:text-xl leading-relaxed mb-6 max-w-2xl font-avenir-book"
             >
-              Just 15 minutes from Honeywell, ADP, and Pfizer. Dolce Hotels and Resorts 
-              offers corporate travelers seamless access to Parsippany's business district 
-              with premium amenities and extended-stay comfort.
+              Nestled minutes from Parsippany's premier business corridor, Dolce Hotels & Resorts
+              delivers an elevated stay for the discerning corporate traveler, where refined comfort,
+              flawless service, and world-class amenities converge.
             </motion.p>
 
             {/* Corporate Badges */}
