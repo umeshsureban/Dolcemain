@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import SectionReveal from '@/components/SectionReveal';
-import { FormEvent } from 'react';
+// import { FormEvent } from 'react';
+import type { FormEvent } from 'react';
 
 const contactInfo = [
   {
