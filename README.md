@@ -3,7 +3,7 @@
 Corporate travel landing page for Dolce Hotels and Resorts, Parsippany NJ.  
 Built with React 19, TypeScript, Vite, Tailwind CSS, and Framer Motion.
 
-## Project Structure
+## Project Structures
 
 ```
 dolcemain/
