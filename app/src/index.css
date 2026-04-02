@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dolce Brand Fonts - Avenir via system fonts as fallback */
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir LT Std 45 Book'), local('Avenir-Book');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir LT Std 65 Medium'), local('Avenir-Medium');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir LT Std 85 Heavy'), local('Avenir-Heavy');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir LT Std 95 Black'), local('Avenir-Black');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Lampoon Brush - using a brush-style fallback */
+@font-face {
+  font-family: 'Lampoon Brush';
+  src: local('Brush Script MT'), local('Brush Script');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    /* Dolce Primary Brand Colors */
+    --dolce-dark-red: #AB162B;
+    --dolce-red-orange: #E2231A;
+    --dolce-dark-yellow: #F38A00;
+    --dolce-dark-gray: #58585B;
+    --dolce-white: #FFFFFF;
+    
+    /* Digital Style Guide Colors */
+    --dolce-primary-button: #B72027;
+    --dolce-primary-button-hover: #880D22;
+    --dolce-dark-bg: #555555;
+    --dolce-light-bg: #D9D9D9;
+    --dolce-link: #C47108;
+    --dolce-link-knockout: #F4D59E;
+    --dolce-divider: #333333;
+    --dolce-inactive: #AAAAAA;
+    --dolce-nav-border: #888888;
+    
+    /* shadcn overrides */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 35%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 35%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 35%;
+    --primary: 352 79% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 85%;
+    --secondary-foreground: 0 0% 35%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 36 100% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 352 79% 38%;
+    --radius: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-[#58585B] antialiased;
+    font-family: 'Avenir', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Dolce Typography Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  /* Dolce Font Classes */
+  .font-lampoon {
+    font-family: 'Lampoon Brush', 'Brush Script MT', cursive;
+  }
+  
+  .font-avenir {
+    font-family: 'Avenir', 'Lato', sans-serif;
+  }
+  
+  .font-avenir-book {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 400;
+  }
+  
+  .font-avenir-medium {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 500;
+  }
+  
+  .font-avenir-heavy {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-avenir-black {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 900;
+  }
+  
+  /* Dolce Brand Colors */
+  .text-dolce-red {
+    color: #AB162B;
+  }
+  
+  .text-dolce-dark-red {
+    color: #AB162B;
+  }
+  
+  .text-dolce-orange {
+    color: #E2231A;
+  }
+  
+  .text-dolce-yellow {
+    color: #F38A00;
+  }
+  
+  .text-dolce-gray {
+    color: #58585B;
+  }
+  
+  .text-dolce-dark-gray {
+    color: #555555;
+  }
+  
+  .text-dolce-link {
+    color: #C47108;
+  }
+  
+  .bg-dolce-red {
+    background-color: #AB162B;
+  }
+  
+  .bg-dolce-dark-red {
+    background-color: #AB162B;
+  }
+  
+  .bg-dolce-orange {
+    background-color: #E2231A;
+  }
+  
+  .bg-dolce-yellow {
+    background-color: #F38A00;
+  }
+  
+  .bg-dolce-gray {
+    background-color: #58585B;
+  }
+  
+  .bg-dolce-dark-gray {
+    background-color: #555555;
+  }
+  
+  .bg-dolce-light {
+    background-color: #D9D9D9;
+  }
+  
+  .border-dolce-red {
+    border-color: #AB162B;
+  }
+  
+  .border-dolce-dark-red {
+    border-color: #AB162B;
+  }
+  
+  /* Primary Button Style */
+  .btn-dolce-primary {
+    background-color: #B72027;
+    color: #FFFFFF;
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    padding: 14px 24px;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-dolce-primary:hover {
+    background-color: #880D22;
+  }
+  
+  /* Secondary Button Style */
+  .btn-dolce-secondary {
+    background-color: #FFFFFF;
+    color: #B72027;
+    border: 2px solid #B72027;
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-dolce-secondary:hover {
+    background-color: #B72027;
+    color: #FFFFFF;
+  }
+  
+  /* Knockout Secondary Button */
+  .btn-dolce-secondary-knockout {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-dolce-secondary-knockout:hover {
+    background-color: #FFFFFF;
+    color: #B72027;
+  }
+  
+  /* Headline Styles per Digital Style Guide */
+  .headline-a {
+    font-family: 'Lampoon Brush', 'Brush Script MT', cursive;
+    font-size: clamp(80px, 15vw, 200px);
+    line-height: 0.5em;
+    text-transform: lowercase;
+  }
+  
+  .headline-b {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.2em;
+  }
+  
+  .headline-c {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: clamp(22px, 2.5vw, 30px);
+    line-height: 1.2em;
+  }
+  
+  .headline-i {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+  }
+  
+  /* Body Text */
+  .body-text {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4em;
+  }
+  
+  /* Detail Text */
+  .detail-text {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.2em;
+  }
+  
+  /* Nav Menu Title */
+  .nav-menu-title {
+    font-family: 'Avenir', 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D9D9D9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AAAAAA;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #58585B;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
