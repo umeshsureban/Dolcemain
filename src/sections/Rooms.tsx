@@ -146,7 +146,7 @@ export default function Rooms() {
                 </button>
               </div>
             </div>
-            <div className="flex items-center justify-center lg:justify-end gap-8">
+            <div className="flex items-center justify-center lg:justify-end gap-8 lg:pr-[20%]">
               <div className="text-center">
                 <p className="font-lampoon text-5xl text-dolce-red">15%</p>
                 <p className="text-dolce-gray text-sm font-avenir-book">Off 7+ Nights</p>
